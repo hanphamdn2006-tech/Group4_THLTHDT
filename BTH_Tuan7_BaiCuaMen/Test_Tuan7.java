@@ -7,7 +7,7 @@ public class Test_Tuan7 {
         SachGiaoTrinh  SGT01 = new SachGiaoTrinh ("SGT01", "Lap Trinh Huong Doi Tuong", 
         "Nguyen Van A", 2000, 400,50000, "Cong Nghe Thong Tin", "Dai hoc");
         SachTieuThuyet STT01 = new SachTieuThuyet ("STT01", "Harry Potter va hon da phu thuy", 
-        "J.K.Jack", 1990, 800, "Gia tuong", true, 50000);
+        "J.K.Jack", 1990, 800,50000, "Gia tuong", true);
         manager.themSach(SGT01);
         manager.themSach(STT01);
         System.out.println("\n2.HIEN THI DANH SACH");

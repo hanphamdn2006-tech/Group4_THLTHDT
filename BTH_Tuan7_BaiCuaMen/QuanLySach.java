@@ -24,7 +24,7 @@ public class QuanLySach {
         int nam = Integer.parseInt(sc.nextLine());
         System.out.print("Nhap so luong: ");
         int sl = Integer.parseInt(sc.nextLine());
-        System.out.print("Nhap gia co ban: ");
+        System.out.print("Nhập giá cơ bản: ");
         double giaCoBan = Double.parseDouble(sc.nextLine());
         System.out.print("Chon loai sach (1. Giao trinh  2. Tieu thuyet): ");
         int loai = Integer.parseInt(sc.nextLine());
@@ -41,7 +41,7 @@ public class QuanLySach {
             String theLoai = sc.nextLine();
             System.out.print("Sach co thuoc series khong? (true/false): ");
             boolean laSeries = Boolean.parseBoolean(sc.nextLine());
-            sach = new SachTieuThuyet(ma, tieuDe, tacGia, nam, sl, theLoai, laSeries, giaCoBan);
+            sach = new SachTieuThuyet(ma, tieuDe, tacGia, nam, sl, giaCoBan, theLoai, laSeries);
         }
 
         danhSach.add(sach);
@@ -79,8 +79,6 @@ public class QuanLySach {
                 System.out.print("Nhap nam xuat ban moi: ");
                 s.setNamXuatBan(Integer.parseInt(sc.nextLine()));
                 System.out.print("Nhap so luong moi: ");
-                System.out.print("Nhap gia co ban moi: ");
-                s.setGiaCoBan(Double.parseDouble(sc.nextLine()));
                 s.setSoLuong(Integer.parseInt(sc.nextLine()));
                 System.out.println("Cap nhat thanh cong!");
                 break;

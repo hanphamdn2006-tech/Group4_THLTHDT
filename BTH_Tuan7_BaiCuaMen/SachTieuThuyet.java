@@ -1,9 +1,11 @@
 package BTH_Tuan7_BaiCuaMen;
-public class SachTieuThuyet extends Sach implements IKiemKe {
+public class SachTieuThuyet extends Sach {
     private String theLoai;       
     private boolean laSachSeries; 
-    
-    public SachTieuThuyet(String maSach, String tieuDe, String tacGia, int namXuatBan, int soLuong, String theLoai, boolean laSachSeries, double giaCoBan) {
+    public SachTieuThuyet() {
+        super();
+    }
+    public SachTieuThuyet(String maSach, String tieuDe, String tacGia, int namXuatBan, int soLuong, double giaCoBan, String theLoai, boolean laSachSeries) {
         super(maSach, tieuDe, tacGia, namXuatBan, soLuong, giaCoBan);
         this.theLoai = theLoai;
         this.laSachSeries = laSachSeries;
@@ -20,24 +22,15 @@ public class SachTieuThuyet extends Sach implements IKiemKe {
     public void setLaSachSeries(boolean laSachSeries) {
         this.laSachSeries = laSachSeries;
     }
-   
+    @Override
+    public double tinhGiaBan() {
+        return getGiaCoBan() + (laSachSeries ? 15000:0 );
+    }
     @Override
     public String toString() {
         return super.toString() +
                 "\nThe loai: " + theLoai +
                 "\nLa sach series: " + (laSachSeries ? "Co" : "Khong") +
-                "\nGia ban: " + tinhGiaBan();
-    }
-    @Override
-    public double tinhGiaBan(){
-        return getGiaCoBan() + (laSachSeries ? 15000 :0);
-    }
-    @Override
-     public boolean kiemTraTonKho(int soLuongToiThieu) {
-        return getSoLuong() >= soLuongToiThieu;
-    }
-    @Override
-    public void capNhatViTri(String viTriMoi) {
-        System.out.println("Da chuyen den \"" + getTieuDe() + "\" Den khu vuc: " + viTriMoi);
+                "\nGia ban: " +  tinhGiaBan();
     }
 }
