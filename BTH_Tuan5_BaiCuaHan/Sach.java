@@ -42,7 +42,7 @@ public class Sach {
         this.namXuatBan = namXuatBan;
     }
 
-    public int getsoluong (int soLuong) {
+    public int getsoluong () {
         return soLuong;
     }
     public void setsoluong (int soLuong) {
@@ -57,4 +57,5 @@ public class Sach {
         System.out.println ("So luong:" + soLuong);
         System.out.println ("------------------------------------");
     }   
+
 }
