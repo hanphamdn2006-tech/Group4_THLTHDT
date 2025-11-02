@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Test_Tuan8 {
+public class Test_Tuan9 {
 
     private static IQuanLySach quanLy = new QuanLySachImpl();
     private static Scanner sc = new Scanner(System.in);
@@ -217,5 +217,6 @@ public class Test_Tuan8 {
         String tuKhoa = sc.nextLine();
         quanLy.locSach(loaiSach, tieuChi, tuKhoa);
     }
+
 
 }
