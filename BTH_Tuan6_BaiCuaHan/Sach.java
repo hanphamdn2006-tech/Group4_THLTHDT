@@ -42,20 +42,24 @@ public class Sach {
         this.namXuatBan = namXuatBan;
     }
 
-    public int getsoluong () {
+    public int getsoluong (int soLuong) {
         return soLuong;
     }
     public void setsoluong (int soLuong) {
         this.soLuong = soLuong;
     }
 
-    public void hienThiThongTin () {
-        System.out.println ("Ma sach:" + maSach);
-        System.out.println ("Tieu de:" + tieuDe);
-        System.out.println ("Tac gia:" + tacGia);
-        System.out.println ("Nam xuat ban:" + namXuatBan);
-        System.out.println ("So luong:" + soLuong);
+
+    public void hienThiThongTin ()
+    {
+        System.out.println (this.toString());
         System.out.println ("------------------------------------");
     }   
 
+    @Override
+    public String toString() {
+        return String.format("Ma Sach: %s | Tieu de: %s | Tac gia: %s | Nam XB: %d | So luong: %d",
+                             maSach, tieuDe, tacGia, namXuatBan, soLuong);
+    }
 }
+
